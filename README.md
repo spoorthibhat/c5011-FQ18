@@ -1,2 +1,2 @@
 # c5011-FQ18
-Repository for CPSC 5011-2 in-class work
+Repository for CPSC 5011-02 in-class work
