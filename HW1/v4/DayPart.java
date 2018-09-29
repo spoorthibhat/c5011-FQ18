@@ -13,9 +13,10 @@ class DayPart {
 			dp = DayParts.MORNING;
 		else if (hour >= 12 && hour < 17) 
 			dp = DayParts.AFTERNOON;
-		else if (hour > 17 && hour < 20)  
+		else if (hour >= 17 && hour < 22)  
 			dp =  DayParts.EVENING;
-		else dp =  DayParts.NIGHT;
+		else 
+			dp =  DayParts.NIGHT;
 	}
 	
 	public DayPart() {
