@@ -21,7 +21,9 @@ public class ArrayIntListTest {
 	@Test
 	public void testConstructor() {
 		ArrayIntList list = new ArrayIntList();
+		assertNotNull(list);
 		ArrayIntList list2 = new ArrayIntList(2);
+		assertNotNull(list2);
 	}
 
 	@Test
