@@ -33,7 +33,9 @@ public class ArrayIntListTest {
 
 	@Test
 	public void testAddValueAtIndex() {
-		fail("Not yet implemented");
+		ArrayIntList list = new ArrayIntList();
+		list.add(0, 5);
+		assertEquals(5, list.get(0));
 	}
 
     /** 
@@ -51,6 +53,10 @@ public class ArrayIntListTest {
 	public void testSet() {
 		ArrayIntList list = new ArrayIntList();
 		list.add(5);
+		list.add(-40);
+		list.add(18);
+		list.set(1, 70);
+		assertEquals(70, list.get(1));
 	}
 
 	/**
@@ -94,7 +100,7 @@ public class ArrayIntListTest {
 		list.remove(1);
 		ArrayIntList list2 = new ArrayIntList();
 		list2.add(5);
-		assertEquals(list.toString(), list2.toString());
+		assertEquals(list2.toString(), list.toString());
 	}
 
 	@Test
