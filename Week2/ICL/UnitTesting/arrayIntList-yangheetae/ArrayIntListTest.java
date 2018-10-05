@@ -7,6 +7,8 @@
 package arrayIntList;
 
 import static org.junit.Assert.*;
+
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -20,17 +22,29 @@ public class ArrayIntListTest {
 
 	@Test
 	public void testConstructor() {
-		fail("Not yet implemented");
+		ArrayIntList list = new ArrayIntList();
+		assertTrue(list.isEmpty());
+		assertEquals(0, list.size());
 	}
 
 	@Test
 	public void testAddValue() {
-		fail("Not yet implemented");
+		ArrayIntList list = new ArrayIntList();
+		list.add(0);
+		assertFalse(list.isEmpty());
 	}
 
 	@Test
 	public void testAddValueAtIndex() {
-		fail("Not yet implemented");
+		ArrayIntList list = new ArrayIntList();
+		list.add(0, 4);
+		list.add(1, 2);
+		list.add(2, 7);
+		assertEquals(7, list.get(2));
+
+		list.add(2, 56);
+		assertEquals(56, list.get(2));
+		assertEquals(2, list.indexOf(56));
 	}
 
     /** 
@@ -86,7 +100,16 @@ public class ArrayIntListTest {
 	@Test
 	public void testRemove() {
 		ArrayIntList list = new ArrayIntList();
-		
+		list.add(1);
+		list.add(55);
+		list.add(182);
+
+		list.remove(0);
+		assertEquals(55, list.get(0));
+
+		list.remove(0);
+		list.remove(0);
+		assertTrue(list.isEmpty());
 	}
 
 	@Test
@@ -95,6 +118,9 @@ public class ArrayIntListTest {
 		list.add(0);
 		list.add(27);
 		assertEquals("[0, 27]", list.toString());
+
+		list.remove(0);
+		assertEquals("[27]", list.toString());
 	}
 
 	/** 
@@ -118,7 +144,15 @@ public class ArrayIntListTest {
 
 	@Test
 	public void testContains() {
-		fail("Not yet implemented");
+		ArrayIntList list = new ArrayIntList();
+		list.add(1);
+		list.add(255);
+		list.add(52);
+
+		assertTrue(list.contains(255));
+
+		list.remove(2);
+		assertFalse(list.contains(52));
 	}
 
 }
