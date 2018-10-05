@@ -20,17 +20,46 @@ public class ArrayIntListTest {
 
 	@Test
 	public void testConstructor() {
-		fail("Not yet implemented");
+	   ArrayIntList list = new ArrayIntList();
+	   assertTrue(list.isEmpty());
+	   ArrayIntList list2 = null;
+	   assertNull(list2);
+	   list2 = new ArrayIntList();
+	   assertNotNull(list2);
+	   assertTrue(list2.isEmpty());
+	   assertEquals(0, list2.size());
 	}
 
 	@Test
 	public void testAddValue() {
-		fail("Not yet implemented");
+      ArrayIntList list = new ArrayIntList();
+      list.add(900);
+      assertEquals(900, list.get(0));
+      assertFalse(list.isEmpty());
+      assertTrue(list.contains(900));
+      assertFalse(list.contains(10));
+      list.add(0);
+      assertTrue(list.contains(0));
+      list.add(-100);
+      assertTrue(list.contains(-100));
+      list.add(50);
+      assertTrue(list.contains(50)); 
 	}
 
 	@Test
 	public void testAddValueAtIndex() {
-      fail("Not yet implemented");
+      ArrayIntList list = new ArrayIntList();
+      list.add(0, 900);
+      assertEquals(900, list.get(0));
+      assertFalse(list.isEmpty());
+      assertTrue(list.contains(900));
+      assertFalse(list.contains(10));
+      list.add(0, 0);
+      assertEquals(0, list.get(0));
+      list.add(0, -100);
+      assertEquals(-100, list.get(0));
+      list.add(1, 50);
+      assertEquals(50, list.get(1));
 	}
 
     /** 
@@ -46,7 +75,19 @@ public class ArrayIntListTest {
 
 	@Test
 	public void testSet() {
-		fail("Not yet implemented");
+      ArrayIntList list = new ArrayIntList();                               
+      list.add(42);                                      
+      list.add(-3);                                         
+      list.add(17);                                            
+      list.add(999);                                     
+      list.add(17);                                                   
+      list.add(86);
+      list.set(0, 3);
+      assertEquals(3, list.get(0));
+      list.set(1, -100);
+      assertEquals(-100, list.get(1));
+      list.set(4, -800);
+      assertEquals(-800, list.get(4));
 	}
 
 	/**
@@ -84,12 +125,33 @@ public class ArrayIntListTest {
 
 	@Test
 	public void testRemove() {
-		fail("Not yet implemented");
+	   ArrayIntList list = new ArrayIntList();
+	   list.add(10);
+	   list.remove(0);
+	   assertTrue(list.isEmpty());
+	   list.add(-40);
+	   list.add(90);
+	   list.remove(1);
+	   assertFalse(list.isEmpty());
+	   assertFalse(list.contains(90));
+	   assertEquals(-40, list.get(0));
+	   list.remove(0);
+	   assertTrue(list.isEmpty());
+	   
 	}
 
 	@Test
 	public void testToString() {
-		fail("Not yet implemented");
+	   ArrayIntList list = new ArrayIntList(); 
+	   assertEquals("[]", list.toString());
+      list.add(4);
+      assertEquals("[4]", list.toString());
+      list.add(-10);  
+      assertEquals("[4, -10]", list.toString());
+      list.add(17);  
+      assertEquals("[4, -10, 17]", list.toString());
+      list.add(1000);  
+      assertEquals("[4, -10, 17, 1000]", list.toString());
 	}
 
 	/** 
@@ -113,7 +175,18 @@ public class ArrayIntListTest {
 
 	@Test
 	public void testContains() {
-		fail("Not yet implemented");
+      ArrayIntList list = new ArrayIntList();                               
+      list.add(42);                                      
+      list.add(-3);                                         
+      list.add(17);                                            
+      list.add(999);                                     
+      assertTrue(list.contains(42));
+      assertTrue(list.contains(-3));
+      assertTrue(list.contains(17));
+      assertTrue(list.contains(999));
+      assertFalse(list.contains(-8));
+      assertFalse(list.contains(20));
+      assertFalse(list.contains(1000));
 	}
 
 }
