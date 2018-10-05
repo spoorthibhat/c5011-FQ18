@@ -22,6 +22,8 @@ public class ArrayIntListTest {
    @Test
    public void testConstructor() {
       ArrayIntList list = new ArrayIntList();
+      assertTrue(list.isEmpty());
+      assertEquals(0, list.size());
    }
 
    @Test
@@ -101,7 +103,7 @@ public class ArrayIntListTest {
       list.remove(0);
       list.remove(0);
       assertTrue(list.isEmpty());
-
+      assertEquals(0, list.size());
    }
 
    /**
@@ -143,6 +145,13 @@ public class ArrayIntListTest {
    @Test
    public void testToString() {
       ArrayIntList list = new ArrayIntList();
+      assertEquals("[]", list.toString());
+      list.add(2);
+      list.add(-3);
+      assertEquals("[2, -3]", list.toString());
+      
+      list.remove(0);
+      assertEquals("[-3]", list.toString()); 
    }
 
    /**
