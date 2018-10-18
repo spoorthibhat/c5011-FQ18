@@ -23,7 +23,10 @@ public class Driver {
 
 	public static void main(String[] args) {
 		RegistrationSystem system = new RegistrationSystem();
-		populateSystem(system);					
+		populateSystem(system);		
+		
+		// TODO: print the results of the RegistrationSystem collections
+		// this include: faculty, students, subjects, courses (and their prerequisites), and course section
 	}
 	
 	private static void populateSystem(RegistrationSystem system) {
