@@ -26,7 +26,8 @@ public class Driver {
 		populateSystem(system);		
 		
 		// TODO: print the results of the RegistrationSystem collections
-		// this include: faculty, students, subjects, courses (and their prerequisites), and course section
+		// this include: faculty, students, subjects, courses (and their prerequisites), 
+		// and course section
 	}
 	
 	private static void populateSystem(RegistrationSystem system) {
