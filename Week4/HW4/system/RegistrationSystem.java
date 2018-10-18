@@ -138,5 +138,7 @@ public class RegistrationSystem {
 	
 	// TODO: add RegistrationSystem collections
 	// student list, faculty list, subject list, course list, section list
+	// note that there is not list for prerequisites - these should be included 
+	// as part of the course list
 	
 }
