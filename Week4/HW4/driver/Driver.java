@@ -70,23 +70,23 @@ public class Driver {
 	}
 	
 	private static void populateFaculty(RegistrationSystem system) throws DuplicatePersonException {
-		system.addFaculty("Adair", "Dingle", FacultyType.PROF);
-		system.addFaculty("Steven", "Hanks", FacultyType.LECTURE);
-		system.addFaculty("Pejman", "Khadivi", FacultyType.ASSTPROF);
-		system.addFaculty("Michael", "Koenig", FacultyType.LECTURE);
-		system.addFaculty("Eric", "Larson", FacultyType.PROF);
-		system.addFaculty("Richard", "LeBlanc", FacultyType.PROF);
-		system.addFaculty("Lin", "Li", FacultyType.ASSTPROF);
-		system.addFaculty("David", "Lillethun", FacultyType.ASSTPROF);
-		system.addFaculty("Kevin", "Lundeen", FacultyType.INSTRUCT);
-		system.addFaculty("Michael", "McKee", FacultyType.LECTURE);
-		system.addFaculty("Aditya", "Mishra", FacultyType.ASSTPROF);
-		system.addFaculty("James", "Obare", FacultyType.INSTRUCT);
-		system.addFaculty("Sheila", "Oh", FacultyType.SEN_INSTRUCT);
-		system.addFaculty("Susan", "Reeder", FacultyType.SEN_INSTRUCT);
-		system.addFaculty("Roshanak", "Roshandel", FacultyType.ASSOCPROF);
-		system.addFaculty("Jason", "Wong", FacultyType.INSTRUCT);
-		system.addFaculty("Yingwu", "Zhu", FacultyType.ASSOCPROF);		
+		system.addFaculty("Adair", "Dingle", FacultyType.PROF, Building.ENGR, 531);
+		system.addFaculty("Steven", "Hanks", FacultyType.LECTURE, Building.ENGR, 511);
+		system.addFaculty("Pejman", "Khadivi", FacultyType.ASSTPROF, Building.ENGR, 521);
+		system.addFaculty("Michael", "Koenig", FacultyType.LECTURE, Building.ENGR, 520);
+		system.addFaculty("Eric", "Larson", FacultyType.PROF, Building.ENGR, 528);
+		system.addFaculty("Richard", "LeBlanc", FacultyType.PROF, Building.ENGR, 527);
+		system.addFaculty("Lin", "Li", FacultyType.ASSTPROF, Building.ENGR, 529);
+		system.addFaculty("David", "Lillethun", FacultyType.ASSTPROF, Building.ENGR, 506);
+		system.addFaculty("Kevin", "Lundeen", FacultyType.INSTRUCT, Building.ENGR, 519);
+		system.addFaculty("Michael", "McKee", FacultyType.LECTURE, Building.ENGR, 519);
+		system.addFaculty("Aditya", "Mishra", FacultyType.ASSTPROF, Building.ENGR, 507);
+		system.addFaculty("James", "Obare", FacultyType.INSTRUCT, Building.ENGR, 502);
+		system.addFaculty("Sheila", "Oh", FacultyType.SEN_INSTRUCT, Building.ENGR, 504);
+		system.addFaculty("Susan", "Reeder", FacultyType.SEN_INSTRUCT, Building.ENGR, 505);
+		system.addFaculty("Roshanak", "Roshandel", FacultyType.ASSOCPROF, Building.ENGR, 508);
+		system.addFaculty("Jason", "Wong", FacultyType.INSTRUCT, Building.ENGR, 526);
+		system.addFaculty("Yingwu", "Zhu", FacultyType.ASSOCPROF, Building.ENGR, 530);		
 	}
 
 	private static void populateSubjects(RegistrationSystem system) throws DuplicateSubjectException {
