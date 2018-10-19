@@ -49,10 +49,13 @@ public class RegistrationSystem {
 	 * @param firstName	The first name of the faculty
 	 * @param lastName	The last name of the faculty
 	 * @param type		The faculty type
+	 * @param bldg		The building of the faculty office
+	 * @param room		The (building) room of the faculty office
 	 * @throws DuplicatePersonException The person is already in the system
 	 */
 	public void addFaculty(String firstName, String lastName,
-							FacultyType type) throws DuplicatePersonException {
+							FacultyType type, Building bldg, int room) 
+							throws DuplicatePersonException {
 		
 		// TODO: implement addFaculty method
 	
